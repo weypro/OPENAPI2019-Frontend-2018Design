@@ -1,0 +1,215 @@
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:600,400,300';
+@import 'https://fonts.googleapis.com/css?family=Roboto+Mono:400';
+
+html {
+    font: normal 16px / 26px "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif !important;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    background: #fff;
+    color: #888888;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body.has-navbar-top{
+	min-height: 75rem;
+	padding-top: 4.5rem;
+}
+a:hover{
+    text-decoration: none;
+}
+.swiper-container{
+    height: 540px;
+}
+.footer-list{
+    list-style-type:none;
+}
+
+.newsdisplay-news404box{
+    padding-top:20px;
+}
+
+
+.section-text{
+    padding-top: 50px;
+}
+.section-two{
+    padding-top: 50px;
+}
+.section-news{
+    margin-bottom: 100px;
+}
+.section-news-ul{
+   list-style-type: none;
+   margin:0;
+   padding:0;
+}
+.section-news-text{
+    color: #363b40;
+    transition: color 0.5s;
+}
+
+.section-news-text:hover{
+    color: #8a9399;
+    text-decoration: underline;
+}
+
+.section-two-item{
+    margin-top: 3rem;
+}
+
+.section-text-block{
+	margin-top: 50px;
+
+}
+
+.section-text-tittle{
+	font-size: 2rem !important;
+}
+
+.section-text-little-tittle{
+	font-size: 1.2rem !important;
+}
+
+.section-item-text{
+	
+	margin-top: 100px;
+	margin-left: 30px;
+}
+.section-item-in-text{
+	font-size: 1rem !important;
+	margin-top: 30px;
+}
+.section-item-button{
+	margin-left: 30px;
+	margin-top: 20px;
+}
+.footer{
+    margin-top: 100px;
+    
+
+}
+
+
+.footer-text{
+    padding-top: 50px;
+
+
+}
+.member-intro{
+    font-size: 14px;
+    margin-bottom: 0 !important;
+    color: #8a9399;
+
+
+}
+
+.member-name{
+    color: #363b40;
+}
+.fa-5{
+    font-size: 7rem;
+}
+.fa-4{
+    font-size: 5rem;
+}
+.fa-2{
+    font-size: 2.3rem;
+}
+.fa-1{
+    font-size: 1.9rem;
+}
+.home-slide-container{
+    padding:10px;
+    margin:0;
+    height: 540px;
+}
+.newsdisplay-newscontent{
+    margin:0;
+    padding:0;
+}
+.common-footer-lastline{
+    padding-bottom: 15px;
+}
+
+.intro-start{
+    background-color: #026FCE;
+    background: linear-gradient(45deg , #026FCE 63% , #1e88e5 97%); 
+}
+
+@media(min-width: 768px)
+{
+    .dologin{
+        width: 100%;
+    }
+    .form-logo{
+        width: 10px;
+        height: 10px;
+    }
+}
+@media(min-width: 992px)
+{
+        .form-logo{
+        width: 50px ;
+        height: 50px ;
+    }
+}
+
+@media(min-width: 1200px)
+{
+    .dologin{
+        width: 32%;
+    }
+        .form-logo{
+        width: 100px;
+        height: 100px;
+    }
+
+}
+
+.dologin{
+    border: 1px solid #dee2e6 !important;
+    box-shadow: 0 .25rem .55rem rgba(0,0,0,.085);
+}
+
+.login-text{
+    font-size: 23px;
+    text-align: center;
+}
+
+.login-little-text{
+    font-size: 18px;
+    text-align: center;
+}
+
+#error_msg{
+    color: #e81123;
+    text-align: center;
+    display: none;
+}
+
+.form-login{
+    display: block;
+    width: 100%;
+    outline: none;
+    padding-right: 3rem;
+
+    font-size: 1rem;
+    line-height: 24px;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-top-color: #fff;
+    border-left-color: #fff;
+    border-right-color: #fff;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.form-login-active{
+   border: 1px solid #026FCE;
+    border-top-color: #fff;
+    border-left-color: #fff;
+    border-right-color: #fff;
+
+}

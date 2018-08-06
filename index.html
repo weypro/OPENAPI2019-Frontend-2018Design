@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+     <head>
+        <meta charset="UTF-8">
+        <!-- Declaring Language -->
+        <link rel="alternate" hreflang="zh" href="https://www.interactiveplus.org/cn/" />
+        <link rel="alternate" hreflang="en" href="https://www.interactiveplus.org/en/" />
+        <!-- Finish Declaring Language -->
+
+        <!-- Delcaring Important Preload JS Files -->
+        <link rel="preload" as="script" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" />
+        <link rel="preload" as="script" href="js/main.js" />
+        <!-- Finish Declaring Preload JS Files -->
+
+        <!-- JS Resource Start -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+        <script src="js/main.js"></script>
+        <!-- JS Resource End -->
+        
+        <!-- Favicon Declaration Start -->
+        <link rel="icon" href="static/favicon.ico" type="image/ico"/>
+        <!-- Favicon Declaration End -->
+        
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="keywords" content="Interactive+, InteractivePlus, InteractivePlus Introduction, STEM, Teenager Programming, Team, Open-Source" />
+        <meta name="description" content="InteractivePlus is a teenager coding group that focus on open-source, and make our world better by the push of technologies. Interactive+ will continue to organize with determination, act with passion, treat others with respect, intergrity and honesty." />
+        <title>InteractivePlus - Auth Login Service</title>
+</head>
+<body>
+<script>
+
+          //Match Language Start
+          
+            function getUrlParam(name) {
+                //构造一个含有目标参数的正则表达式对象
+                var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+                //匹配目标参数
+                var r = window.location.search.substr(1).match(reg);
+                //返回参数值
+                if(r != null) {
+                    return decodeURI(r[2]);
+                }
+                return null;
+            }
+            
+            function redirectToURL(URL){
+                window.location = URL;
+                window.location.href = URL;
+                $("head").append('<meta http-equiv="refresh" content="0;url=' + URL + '" />');
+            }
+
+            function redirectLangTo(Language, Page){
+                var URL= Language + "/" + Page;
+                $.cookie("XSYD_Language",Language,{expires:XSYD_WebSettings.languageCookieDuration, path:'/'});
+                redirectToURL(URL);
+            }
+            $(document).ready(function(e) {
+                var jumpLang = getUrlParam("jumpLanguage");
+                if(jumpLang === null || jumpLang === undefined){
+                    var userLang = (navigator.language || navigator.userLanaguage || navigator.browserLanguage).toLowerCase();
+                    if(userLang.indexOf("zh") > -1){
+                        redirectLangTo("cn","index.html");
+                    }else{
+                        redirectLangTo("en","index.html");
+                    }
+                }else{
+                    var jumpPage = getUrlParam("jumpPage");
+                    if(jumpPage === null || jumpPage === undefined){
+                        jumpPage = "";
+                    }
+                    redirectLangTo(jumpLang,jumpPage);
+                }
+            });
+        </script>
+</body>
+</html>
