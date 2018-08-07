@@ -5,7 +5,7 @@
 
 
 
-Design By LiuXing
+Design By LiuXing & DimoJang
 
 
 Belong to InterActive+ Team
